@@ -1,21 +1,26 @@
 <?php get_header(); ?>
-<div id="content">
+
 <?php the_post(); ?>
+<h1>
 <?php if ( is_day() ) : ?>
-<h1 class="page-title"><?php printf( __( 'Daily Archives: %s', 'blankslate' ), '<span>' . get_the_time(get_option('date_format')) . '</span>' ) ?></h1>
+<span>Daily Archives</span> <?= get_the_time(get_option('date_format')) ?>
 <?php elseif ( is_month() ) : ?>
-<h1 class="page-title"><?php printf( __( 'Monthly Archives: %s', 'blankslate' ), '<span>' . get_the_time('F Y') . '</span>' ) ?></h1>
+<span>Monthly Archives</span> <?= get_the_time('F Y') ?>
 <?php elseif ( is_year() ) : ?>
-<h1 class="page-title"><?php printf( __( 'Yearly Archives: %s', 'blankslate' ), '<span>' . get_the_time('Y') . '</span>' ) ?></h1>
+<span>Yearly Archives</span> <?= get_the_time('Y') ?>
 <?php elseif ( isset($_GET['paged']) && !empty($_GET['paged']) ) : ?>
-<h1 class="page-title"><?php _e('Blog Archives', 'blankslate' ); ?></h1>
+Post Archives
 <?php endif; ?>
+</h1>
 <?php rewind_posts(); ?>
-<?php get_template_part( 'nav', 'above' ); ?>
-<?php while ( have_posts() ) : the_post(); ?>
-<?php get_template_part( 'entry' ); ?>
+
+<div class="posts">
+<?php while ( have_posts() ) : the_post() ?>
+	<?php get_template_part('entry'); ?>
+	<?php $first = false; ?>
 <?php endwhile; ?>
-<?php get_template_part( 'nav', 'below' ); ?>
 </div>
-<?php get_sidebar(); ?>
+
+<?php get_template_part('nav', 'below'); ?>
+
 <?php get_footer(); ?>

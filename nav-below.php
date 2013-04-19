@@ -1,6 +1,16 @@
-<?php global $wp_query; $total_pages = $wp_query->max_num_pages; if ( $total_pages > 1 ) { ?>
-<div id="nav-below" class="navigation">
-<div class="nav-previous"><?php next_posts_link(sprintf(__( '%s older articles', 'blankslate' ),'<span class="meta-nav">&larr;</span>')) ?></div>
-<div class="nav-next"><?php previous_posts_link(sprintf(__( 'newer articles %s', 'blankslate' ),'<span class="meta-nav">&rarr;</span>')) ?></div>
+<? global $wp_query; $total_pages = $wp_query->max_num_pages; ?>
+<? $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
+<? if ($total_pages > 1): ?>
+<div class="pagination clearfix">
+	<? if ($paged < $wp_query->max_num_pages): ?>
+	<div class="control next btn">
+		<?php next_posts_link('Next Page &raquo;') ?>
+	</div>
+	<? endif; ?>
+	<? if ($paged > 1): ?>
+	<div class="control previous btn">
+		<?php previous_posts_link('&laquo; Previous Page') ?>
+	</div>
+	<? endif; ?>
 </div>
-<?php } ?>
+<? endif; ?>

@@ -1,14 +1,19 @@
-<?php get_header(); ?>
-<div id="content">
-<?php the_post(); ?>
-<h1 class="page-title author"><?php printf( __( 'Author Archives: %s', 'blankslate' ), "<span class=\"vcard\"><a class='url fn n' href='$authordata->user_url' title='$authordata->display_name' rel='me'>$authordata->display_name</a></span>" ) ?></h1>
-<?php $authordesc = $authordata->user_description; if ( !empty($authordesc) ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . $authordesc . '</div>' ); ?>
-<?php rewind_posts(); ?>
-<?php get_template_part( 'nav', 'above' ); ?>
-<?php while ( have_posts() ) : the_post(); ?>
-<?php get_template_part( 'entry' ); ?>
-<?php endwhile; ?>
-<?php get_template_part( 'nav', 'below' ); ?>
+<? get_header(); ?>
+
+<? $author_page = true; ?>
+
+<? the_post(); ?>
+
+<h1><?= get_avatar( get_the_author_meta('ID'), 56 ); ?> <? the_author() ?></h1>
+
+<? rewind_posts(); ?>
+<div class="posts">
+<? while ( have_posts() ) : the_post() ?>
+	<? get_template_part('entry'); ?>
+	<? $first = false; ?>
+<? endwhile; ?>
 </div>
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+
+<? get_template_part('nav', 'below'); ?>
+
+<? get_footer(); ?>
