@@ -1,17 +1,9 @@
 <?php
 	$per_page = 6;	
-
 	$args = array( 'numberposts' => $per_page * 3, 'order'=> 'ASC', 'orderby' => 'post_date' );
 	$posts = get_posts($args);
-
-	$posts = array_merge($posts,$posts);
-	$posts = array_merge($posts,$posts);
-
-	
 	$num = count($posts);
 	$pages = ceil($num / $per_page);
-
-	//setup_postdata($post);
 ?>
 <div class="title inner">
 	<h2>Recommended Reading</h2>

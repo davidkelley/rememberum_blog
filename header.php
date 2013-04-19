@@ -44,7 +44,7 @@
     <![endif]-->
 
     <? $max = 6; ?>
-    <? $args = array('orderby' => 'id', 'hide_empty' => 0); ?>
+    <? $args = array('orderby' => 'id', 'hide_empty' => 0, 'parent' => 0); ?>
     <? $categories = array_slice(get_categories($args), 0, $max + 1); ?>
 
     <? 
@@ -90,7 +90,7 @@
     	<div id="sub-menus">
     		<? foreach($categories as $category): ?>
     		<? if ($category->slug != 'uncategorized'): ?>
-			<? $children = get_categories(array('orderby' => 'name', 'child_of' => $category->cat_ID)); ?>
+			<? $children = get_categories(array('orderby' => 'name', 'hide_empty' => 0, 'child_of' => $category->cat_ID)); ?>
 			<? $i = 0; $rows = 8; ?>
 			<div id="sub-menu-<?= $category->slug ?>" class="sub-menu container clearfix">
 			<? foreach($children as $child): ?>

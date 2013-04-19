@@ -42,8 +42,6 @@ define(['jquery', 'helpers/binder'], function($, Binder) {
 			//extract id
 			var id = $(el).data('id');
 
-			console.log(el, id);
-
 			//show sub menu
 			$('#sub-menu-' + id).addClass('active');
 		},

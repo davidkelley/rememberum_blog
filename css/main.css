@@ -596,6 +596,64 @@ nav ul li.active a {
     color:#adadb0;
 }
 
+.post .post-content h3 {
+    color:#47474b;
+    font-size:19.5pt;
+    margin:20px 0;
+}
+
+.post .post-content h2 {
+    margin: 20px 0;
+    font-size:28pt;
+}
+
+.post .post-content pre {
+    width: 80%;
+    display: block;
+    margin: 10px auto;
+    border: solid 1px #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    font-size:10pt;
+}
+
+.post .post-content table {
+    width: 100%;
+    margin: 20px auto;
+}
+
+.post .post-content thead {
+    color:#fcb340;
+}
+
+.post .post-content tbody {
+    color: #adadb0;
+}
+
+.post .post-content table caption {
+    font-size: 19.5pt;
+}
+
+.post .post-content img {
+    display: block;
+    margin: 20px auto;
+}
+
+.post .post-content dl {
+    margin:20px 0;
+}
+
+.post .post-content dl dt {
+    margin:0;
+    color:#47474b;
+    font-size:19.5pt;
+}
+
+.post .post-content dl dd {
+    color:#adadb0;
+    font-family:'proxima_nova_light', 'proxima_nova_regular', 'Helvetica Neue', Arial, sans-serif;
+}
+
 .post .post-content ul li:first-line,
 .post .post-content ol li:first-line {
     color:#7d7d7d;
