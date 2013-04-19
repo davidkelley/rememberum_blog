@@ -33,7 +33,7 @@
     <? if (is_single()): ?>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     <? endif; ?>
-    
+
     <?php wp_head(); ?>
 
 </head>
@@ -80,7 +80,7 @@
     				<? endforeach; ?>
     			</ul>
     		</nav>
-			<form class="search-form col3" method="get" action="/">
+			<form class="search-form col3" method="get" action="<?= site_url(); ?>">
 				<div id="search-inputs">
 					<input type="text" placeholder="Search Rememberum" value="" name="s" id="s">
 					<input type="submit" id="searchsubmit" value="Search">
