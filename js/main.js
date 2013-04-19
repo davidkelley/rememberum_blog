@@ -63,7 +63,7 @@ requirejs.config({
 require(['components/modernizr']);
 
 //load header module
-require(['header']);
+require(['header', 'recommended']);
 
 /**
  * Perform post-initialisation DOM manipulations

@@ -8,6 +8,17 @@ foreach(wp_get_post_categories(get_the_ID()) as $id) {
 }
 ?>
 <div class="left">
+	<div class="post-social clearfix">
+		<div class="service twitter">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="rememberum" data-count="none">Tweet</a>
+		</div>
+		<div class="service google">
+			<div class="g-plusone" data-size="medium" data-annotation="none"></div>
+		</div>
+		<div class="service facebook">
+			<div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+		</div>
+	</div>
 	<? $tags = get_the_tags(); ?>
 	<? if ($tags): ?>
 	<h4><strong>Tags</strong></h4>
@@ -41,5 +52,24 @@ foreach(wp_get_post_categories(get_the_ID()) as $id) {
 	<h2><a href="<?= the_permalink(); ?>"><?= the_title(); ?></a></h2>
 	<div class="post-content">
 		<?= the_content(); ?>
+	</div>
+	<div class="post-footer clearfix">
+		<h3>Share this:</h3>
+		<div class="post-social clearfix">
+			<div class="service twitter">
+				<a href="https://twitter.com/share" class="twitter-share-button" data-via="rememberum" data-count="none">Tweet</a>
+			</div>
+			<div class="service google">
+				<div class="g-plusone" data-size="medium" data-annotation="none"></div>
+			</div>
+			<div class="service facebook">
+				<div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+			</div>
+		</div>
+		<a href="#top" class="to-top slide-to">Back to top</a>
+	</div>
+	<div class="post-comments">
+		<h2>Leave a Comment</h2>
+		<?php comments_template('', true); ?>
 	</div>
 </div>

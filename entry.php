@@ -2,7 +2,7 @@
 <? if ( ! is_singular()): ?>
 	<div id="post-<?php the_ID(); ?>" class="post list clearfix">
 	<? if ($home && $first): ?>
-		<div class="featured">
+		<div class="featured clearfix">
 		<? get_template_part( 'entry', 'featured' ); ?>
 		</div>
 	<? else: ?>
@@ -10,8 +10,8 @@
 	<? endif; ?>
 <? else: ?>
 	<div id="post-<?php the_ID(); ?>" class="post single clearfix">
-	<div class="featured">
-	<? get_template_part( 'entry', 'single' ); ?>
-	</div>
+		<div class="featured clearfix">
+		<? get_template_part( 'entry', 'single' ); ?>
+		</div>
 <? endif; ?>
 </div>
