@@ -407,9 +407,6 @@ nav ul li.active a {
 
 .post h2 {
     font-size:27pt;
-}
-
-.post.single h2 {
     font-family:'proxima_nova_light', 'proxima_nova_regular', 'Helvetica Neue', Arial, sans-serif;
 }
 
@@ -499,12 +496,14 @@ nav ul li.active a {
 
 .post .featured .featured-meta datetime {
     background: url(../images/icons/post-date.png) no-repeat 0px 2px;
+    font-family:'proxima_nova_light', 'proxima_nova_regular', 'Helvetica Neue', Arial, sans-serif;
     padding-left:27px;
     min-height:18px;
 }
 
 .post .featured .featured-meta .post-author {
     background:url(../images/icons/post-author.png) no-repeat 0px 3px;
+    font-family:'proxima_nova_light', 'proxima_nova_regular', 'Helvetica Neue', Arial, sans-serif;
     padding-left:25px;
     min-height:15px;
 }
@@ -579,6 +578,10 @@ nav ul li.active a {
 .post .featured .post-content {
     font-size:15pt;
     line-height:1.4;
+}
+
+.post .post-content {
+    font-family:'proxima_nova_light', 'proxima_nova_regular', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .post .post-content blockquote {
@@ -809,6 +812,7 @@ nav ul li.active a {
     line-height: 1.5;
     max-height: 120px;
     overflow: hidden;
+    font-family:'proxima_nova_light', 'proxima_nova_regular', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .recommended-post .post-more {
@@ -825,14 +829,42 @@ nav ul li.active a {
 .pagination .control {
     display:inline-block;
     white-space:nowrap;
+    position: relative;
+    padding-bottom: 1px;
+    border-bottom: solid 1px #fcb340;
+    font-size: 15pt;
+    color: #fcb340;
 }
 
-.pagination .control a {
-    color:#FFF !important;
+.pagination .control:hover {
+    border-bottom-color: #838383;
+    color: #838383;
+}
+
+.pagination .control:before {
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+    font-size: 12pt;
+}
+
+.pagination .control.next:before {
+    content:'>';
+    right:-15px;
+}
+
+.pagination .control.previous:before {
+    content:'<';
+    left:-15px;
 }
 
 .pagination .next {
     float:right;
+    margin-right:15px;
+}
+
+.pagination .control.previous {
+    margin-left:15px;
 }
 
 .ir {

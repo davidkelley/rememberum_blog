@@ -3,13 +3,13 @@
 <? if ($total_pages > 1): ?>
 <div class="pagination clearfix">
 	<? if ($paged < $wp_query->max_num_pages): ?>
-	<div class="control next btn">
-		<?php next_posts_link('Next Page &raquo;') ?>
+	<div class="control next">
+		<?php next_posts_link('Next Page') ?>
 	</div>
 	<? endif; ?>
 	<? if ($paged > 1): ?>
-	<div class="control previous btn">
-		<?php previous_posts_link('&laquo; Previous Page') ?>
+	<div class="control previous">
+		<?php previous_posts_link('Previous Page') ?>
 	</div>
 	<? endif; ?>
 </div>

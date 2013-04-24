@@ -27,7 +27,7 @@
 			</div>
 			<div class="newsletter push3 clearfix col4">
 				<div class="pull-right">
-					Placeholder
+					
 				</div>
 			</div>
 		</div>

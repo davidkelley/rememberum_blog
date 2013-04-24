@@ -1,5 +1,5 @@
 <div class="left">
-	<div class="banner"><strong>Featured Article</strong></div>
+	<div class="banner">Featured Article</div>
 </div>
 <div class="right">
 	<div class="featured-meta">
