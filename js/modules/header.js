@@ -12,15 +12,20 @@ define(['jquery', 'helpers/binder'], function($, Binder) {
 	//get all sub menus
 	var subMenus = $('.sub-menu');
 
+	//join cta
+	var join = $('#join-wrapper');
+
 	var m = {
 		scroll: function() {
 			var top = $(window).scrollTop();
 
 			if (top > 111) {
 				header.addClass('offset');
+				join.addClass('visible');
 			} else {
 				header.removeClass('offset');
 				header.css({top:-top});
+				join.removeClass('visible');
 			}
 		},
 

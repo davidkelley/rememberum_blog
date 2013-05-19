@@ -68,7 +68,7 @@
 	    		</ul>
 	    	</div>
     	</div>
-    	<div class="container clearfix">
+    	<div id="menu-container" class="container clearfix">
     		<nav class="col9">
     			<ul class="clearfix">
     				<? foreach($categories as $category): ?>
@@ -103,7 +103,7 @@
     		<? endif; ?>
     		<? endforeach; ?>
     	</div>
-    	<div class="wrapper">
+    	<div id="join-wrapper" class="wrapper">
 	    	<div id="join-cta" class="container clearfix">
 	    		<div class="col12">
 	    			<div class="clearfix">

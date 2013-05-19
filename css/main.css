@@ -131,6 +131,21 @@ textarea {
 .wrapper {
     position: absolute;
     width: 100%;
+    z-index:-1;
+}
+
+#join-wrapper {
+    margin-top: -87px;
+
+    -webkit-transition: margin-top 1s ease-in-out;
+    -moz-transition: margin-top 1s ease-in-out;
+    -o-transition: margin-top 1s ease-in-out;
+    -ms-transition: margin-top 1s ease-in-out;
+    transition: margin-top 1s ease-in-out;
+}
+
+#join-wrapper.visible {
+    margin-top:0;
 }
 
 footer {
@@ -202,10 +217,15 @@ body.logged-in header {
     padding-top:28px;
 }
 
+#menu-container {
+    background: #FFF;
+}
+
 #network {
     display:block;
     border-bottom:solid 2px #f7f7f7;
     padding:44px 0;
+    background: #FFF;
 }
 
 #network-menu {
@@ -371,7 +391,7 @@ nav ul li.active a {
     background:#FFF;
     border-radius:10px;
     margin-bottom:120px;
-    margin-top:320px;
+    margin-top:233px;
     width:944px;
 }
 
