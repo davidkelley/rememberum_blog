@@ -21,10 +21,15 @@ define(['jquery', 'helpers/binder'], function($, Binder) {
 
 			if (top > 111) {
 				header.addClass('offset');
-				join.addClass('visible');
+				
 			} else {
 				header.removeClass('offset');
 				header.css({top:-top});
+			}
+
+			if (top > document.height / 2) {
+				join.addClass('visible');
+			} else {
 				join.removeClass('visible');
 			}
 		},

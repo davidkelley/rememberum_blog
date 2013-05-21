@@ -195,6 +195,7 @@ footer .network-links li:first-child {
 
 header {
     background: white;
+    border-bottom: solid 2px #f7f7f7;
     position: fixed;
     top: 0;
     width: 100%;
@@ -365,6 +366,16 @@ nav ul li.active a {
 
 .sub-menu.active {
     display:block;
+}
+
+#join-shadow {
+    position:absolute;
+    width:100%;
+}
+
+#join-shadow .container {
+    background: url(../images/cta-bg.png) #efefef repeat-x top center;
+    height:17px;
 }
 
 #join-cta .col12 {
